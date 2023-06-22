@@ -42,7 +42,7 @@ $ python demo_estimation_inter_content.py --nb_bootstrap 100 --filename ./datase
 
 The number of bootstraps can be changed for more or less precision in the estimations. A value of 0 will disable bootstrapping and CI estimation. 
 
-The solver's name can be either "mle" or "glm".
+The solver's name can be "mle" or "glm".
 
 The name of the filename can also be changed between the 3 datasets available in the dataset folder: "pairwise_dataset.npz", "triplet_dataset.npz", and "quad_dataset.npz".
 
@@ -58,14 +58,22 @@ $ python demo_estimation.py --nb_bootstrap 1000 --filename ./datasets/quad_intra
 
 ## Exaample to convert csv file to npz
 
-We provided an example code on how we convert the raw annotations that we obtained in csv files into npz file containing numpy array needed by the solving procedure.
+We provided an example code on how we convert the raw annotations that we obtained in CSV files into ".npz" file containing Numpy array needed by the solving procedure.
 
 ```
 $ python convert_datasets.py
 ```
 
-## Reference paper 
+## Reference papers 
 
-To be defined soon
+[1] Andréas Pastor and Patrick Le Callet. 2023. Perceptual annotation of local distortions in videos: tools and datasets. In Proceedings of the 14th Conference on ACM Multimedia Systems (MMSys '23). DOI: https://doi.org/10.1145/3587819.3592559
+
+[2] A. Pastor, L. Krasula, X. Zhu, Z. Li and P. Le Callet, "Improving Maximum Likelihood Difference Scaling Method To Measure Inter Content Scale," ICASSP 2022 - 2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Singapore, Singapore, 2022, pp. 2045-2049, doi: 10.1109/ICASSP43922.2022.9746681.
+
+[3] A. Pastor, L. Krasula, X. Zhu, Z. Li and P. L. Callet, "On the Accuracy of Open Video Quality Metrics for Local Decision in AV1 Video Codec," 2022 IEEE International Conference on Image Processing (ICIP), Bordeaux, France, 2022, pp. 4013-4017, doi: 10.1109/ICIP46576.2022.9897469.
+
+[4] Andréas Pastor and Patrick Le Callet. 2022. Perception of video quality at a local spatio-temporal horizon: research proposal. In Proceedings of the 13th ACM Multimedia Systems Conference (MMSys '22). Association for Computing Machinery, New York, NY, USA, 378–382. https://doi.org/10.1145/3524273.3533931
+
+
 
 
