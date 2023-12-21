@@ -1,5 +1,6 @@
 import utils.solvers as solvers
 import utils.data_preprocessing as dp
+import utils.annotation_methods as am
 import utils.stats as stats
 
 import numpy as np
@@ -113,7 +114,41 @@ if __name__ == '__main__':
                                                              solver, n_sim_solving, filename, content_dic)
 
 
-        
+
+    # end of the solving for quadruplets, triplets and pairs based datasets
+    if n_sim_solving != 0 or filename != "./datasets/quad_dataset.npz":
+        quit()
+    
+    # additionnal code that run in case of quadruplets dataset for active sampling and selection of new quadruplets to annotate
+
+    all_estims, all_estims_std = am.params_to_estimates(nb_content, nb_distortion_levels, mean_estimations, std_estimations) # convert to estimates for the AFAD_R computation
+    quad_inters = [am.generate_valid_inter_quadruplets(n, inter_quad_mode=2) for n in nb_distortion_levels] # generate all possible inter quadruplets over all contents
+    print("all_estims", all_estims, all_estims_std) # all_estims is a list of list of estimates for each content
+    print()
+    print("quad_inters", quad_inters) # quad_inters is a list of list of inter quadruplets where values are the indices of the distortion levels (0: reference, 1: 1st distortion level, etc.)
+    print()
+
+    all_dists = am.compute_AFAD_R_in_quadruplets(quad_inters, all_estims) # compute the AFAD_R for all inter quadruplets
+    print("len all_dists", len(all_dists)) # all_dists is a list of list of AFAD_R for each inter quadruplets
+
+    sorted_trials = sorted(all_dists, key=lambda l:l[0]) # sort the inter quadruplets by AFAD_R value
+    tobeannotated = sorted_trials[:20] # select the 20 first inter quadruplets to be annotated next
+
+    for l in range(len(tobeannotated)): # add the content name and the distortion level name to the inter quadruplets
+        indA = source_list[tobeannotated[l][-2]]
+        tobeannotated[l].append(indA)
+        tobeannotated[l].append(source_list[tobeannotated[l][-2]]) # again -2 because append above
+
+    print(tobeannotated, len(tobeannotated)) # print the 20 first inter quadruplets to be annotated next
+
+    '''
+    An example of output:
+    [[0.00015002608333607276, [0, 1], [0, 1], 6, 7, 'videoSRC036_patch2646', 'videoSRC037_patch833'], ...]
+    [[AFAD_R score, [distortion level indices for content 1], [distortion level indices for content 2], content 1 index, content 2 index, content 1 name, content 2 name], ...]
+
+    Here, the first quadruplet will be videoSRC036_patch2646_reference, videoSRC036_patch2646_1st_dist_lvl, videoSRC037_patch833_reference, videoSRC037_patch833_1st_dist_lvl
+    '''
+
 
     
 

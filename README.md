@@ -56,13 +56,21 @@ The following command will estimate scores and generate figures for each tube-co
 $ python demo_estimation.py --nb_bootstrap 1000 --filename ./datasets/quad_intra.npz --solver mle
 ```
 
-## Exaample to convert csv file to npz
+## Example to convert csv file to npz
 
 We provided an example code on how we convert the raw annotations that we obtained in CSV files into ".npz" file containing Numpy array needed by the solving procedure.
 
 ```
 $ python convert_datasets.py
 ```
+
+## Active-sampling with AFAD_R algorithm
+
+When running the following command, after the display of the solving, the active-sampling strategy will sample 20 new quadruplets to annotate next by an observer.
+```
+$ python demo_estimation_inter_content.py --nb_bootstrap 0 --filename ./datasets/quad_dataset.npz --solver mle
+```
+See comments in the code for detailed explanations.
 
 ## Reference papers 
 
