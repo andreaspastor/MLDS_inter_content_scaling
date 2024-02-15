@@ -76,11 +76,58 @@ See comments in the code for detailed explanations.
 
 [1] Andréas Pastor and Patrick Le Callet. 2023. Perceptual annotation of local distortions in videos: tools and datasets. In Proceedings of the 14th Conference on ACM Multimedia Systems (MMSys '23). DOI: https://doi.org/10.1145/3587819.3592559
 
-[2] A. Pastor, L. Krasula, X. Zhu, Z. Li and P. Le Callet, "Improving Maximum Likelihood Difference Scaling Method To Measure Inter Content Scale," ICASSP 2022 - 2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Singapore, Singapore, 2022, pp. 2045-2049, doi: 10.1109/ICASSP43922.2022.9746681.
+For open science camera-ready paper: https://hal.science/hal-04131998/document
+```
+@inproceedings{pastor2023perceptual,
+  title={Perceptual annotation of local distortions in videos: tools and datasets},
+  author={Pastor, Andr{\'e}as and Le Callet, Patrick},
+  booktitle={Proceedings of the 14th Conference on ACM Multimedia Systems},
+  pages={458--462},
+  year={2023}
+}
+```
 
-[3] A. Pastor, L. Krasula, X. Zhu, Z. Li and P. L. Callet, "On the Accuracy of Open Video Quality Metrics for Local Decision in AV1 Video Codec," 2022 IEEE International Conference on Image Processing (ICIP), Bordeaux, France, 2022, pp. 4013-4017, doi: 10.1109/ICIP46576.2022.9897469.
+[2] A. Pastor, L. Krasula, X. Zhu, Z. Li and P. Le Callet, "Improving Maximum Likelihood Difference Scaling Method To Measure Inter Content Scale", ICASSP 2022 - 2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), Singapore, Singapore, 2022, pp. 2045-2049, DOI: https://doi.org/10.1109/ICASSP43922.2022.9746681
+
+For open science camera-ready paper: https://hal.science/hal-03632982/document
+```
+@inproceedings{pastor2022mlds,
+  title={Improving maximum likelihood difference scaling method to measure inter content scale},
+  author={Pastor, Andr{\'e}as and Krasula, Luk{\'a}{\v{s}} and Zhu, Xiaoqing and Li, Zhi and Le Callet, Patrick},
+  booktitle={ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={2045--2049},
+  year={2022},
+  organization={IEEE}
+}
+```
+
+
+[3] A. Pastor, L. Krasula, X. Zhu, Z. Li and P. L. Callet, "On the Accuracy of Open Video Quality Metrics for Local Decision in AV1 Video Codec", 2022 IEEE International Conference on Image Processing (ICIP), Bordeaux, France, 2022, pp. 4013-4017, DOI: https://doi.org/10.1109/ICIP46576.2022.9897469
+
+For open science camera-ready paper: https://hal.science/hal-03850340/document
+```
+@inproceedings{pastor2022accuracy,
+  title={On the accuracy of open video quality metrics for local decision in av1 video codec},
+  author={Pastor, Andr{\'e}as and Krasula, Luk{\'a}{\v{s}} and Zhu, Xiaoqing and Li, Zhi and Le Callet, Patrick},
+  booktitle={2022 IEEE International Conference on Image Processing (ICIP)},
+  pages={4013--4017},
+  year={2022},
+  organization={IEEE}
+}
+```
 
 [4] Andréas Pastor and Patrick Le Callet. 2022. Perception of video quality at a local spatio-temporal horizon: research proposal. In Proceedings of the 13th ACM Multimedia Systems Conference (MMSys '22). Association for Computing Machinery, New York, NY, USA, 378–382. https://doi.org/10.1145/3524273.3533931
+
+For open science camera-ready paper: https://hal.science/hal-03850347/document
+```
+@inproceedings{pastor2022perception,
+  title={Perception of video quality at a local spatio-temporal horizon: research proposal},
+  author={Pastor, Andr{\'e}as and Callet, Patrick Le},
+  booktitle={Proceedings of the 13th ACM Multimedia Systems Conference},
+  pages={378--382},
+  year={2022}
+}
+```
 
 
 
